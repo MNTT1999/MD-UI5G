@@ -180,7 +180,7 @@
 "days" = "(các) ngày"
 
 [pages.inbounds.toasts]
-"obtain "Đạt được"
+"obtain" = "Đạt được"
 
 [pages.inbounds.stream.general]
 "requestHeader" = "Tiêu đề yêu cầu"
