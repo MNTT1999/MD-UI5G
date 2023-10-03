@@ -70,7 +70,7 @@
 "successLogin" = "Login"
 
 [pages.index]
-"titlea"Trạng thái hệ thống"
+"title" = "Trạng thái hệ thống"
 "memory" ="Ký ức"
 "hard" ="Ổ đĩa cứng"
 "xrayStatus" ="Trạng thái tia X"
