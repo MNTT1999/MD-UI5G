@@ -1,4 +1,4 @@
-# x-ui
+# MD-UI5G
 
 ![](https://img.shields.io/github/v/release/alireza0/x-ui.svg)
 ![](https://img.shields.io/docker/pulls/alireza7/x-ui.svg)
@@ -6,45 +6,45 @@
 [![Downloads](https://img.shields.io/github/downloads/alireza0/x-ui/total.svg)](https://img.shields.io/github/downloads/alireza0/x-ui/total.svg)
 [![License](https://img.shields.io/badge/license-GPL%20V3-blue.svg?longCache=true)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-> **Disclaimer: This project is only for personal learning and communication, please do not use it for illegal purposes, please do not use it in a production environment**
+> **Tuyên bố miễn trừ trách nhiệm: Dự án này chỉ dành cho mục đích học tập và giao tiếp cá nhân, vui lòng không sử dụng nó cho mục đích bất hợp pháp, vui lòng không sử dụng nó trong môi trường sản xuất**
 
-xray panel supporting multi-protocol, **Multi-lang (English,Farsi,Chinese,Russian)**
+bảng điều khiển xray hỗ trợ đa giao thức, **Đa ngôn ngữ (tiếng Anh, tiếng Farsi, tiếng Trung, tiếng Nga)**
 
-| Features                             |      Enable?       |
+| Tính năng | Cho phép? |
 | ------------------------------------ | :----------------: |
-| Multi-lang                           | :heavy_check_mark: |
-| Dark/Light Theme                     | :heavy_check_mark: |
-| Search in deep                       | :heavy_check_mark: |
-| Inbound Multi User                   | :heavy_check_mark: |
-| Multi User Traffic & Expiration time | :heavy_check_mark: |
-| REST API                             | :heavy_check_mark: |
-| Telegram BOT (admin + clients)       | :heavy_check_mark: |
-| Backup database using Telegram BOT   | :heavy_check_mark: |
-| Subscription link + userInfo         | :heavy_check_mark: |
-| Calculate expire date on first usage | :heavy_check_mark: |
+| Đa ngôn ngữ | :heavy_check_mark: |
+| Chủ đề tối/sáng | :heavy_check_mark: |
+| Tìm kiếm sâu | :heavy_check_mark: |
+| Nhiều người dùng trong nước | :heavy_check_mark: |
+| Lưu lượng truy cập nhiều người dùng và thời gian hết hạn | :heavy_check_mark: |
+| API REST | :heavy_check_mark: |
+| Telegram BOT (quản trị viên + khách hàng) | :heavy_check_mark: |
+| Sao lưu cơ sở dữ liệu bằng Telegram BOT | :heavy_check_mark: |
+| Liên kết đăng ký + userInfo | :heavy_check_mark: |
+| Tính ngày hết hạn trong lần sử dụng đầu tiên | :heavy_check_mark: |
 
-**If you think this project is helpful to you, you may wish to give a** :star2:
+**Nếu bạn cho rằng dự án này hữu ích với bạn, bạn có thể cho ý kiến** :star2:
 
-# Install & Upgrade to latest version
+# Cài đặt & Nâng cấp lên phiên bản mới nhất
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/MNTT1999/MD-UI5G/main/install.sh)
 ```
 
-## Install custom version
+## Cài đặt phiên bản tùy chỉnh
 
-To install your desired version you can add the version to the end of install command. Example for ver `0.5.2`:
+Để cài đặt phiên bản mong muốn, bạn có thể thêm phiên bản đó vào cuối lệnh cài đặt. Ví dụ cho phiên bản `0.5.2`:
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/MNTT1999/MD-UI5G/main/install.sh) 0.5.2
 ```
 
-## Manual install & upgrade
+## Cài đặt và nâng cấp thủ công
 
-1. First download the latest compressed package from https://github.com/alireza0/x-ui/releases, generally choose Architecture `amd64`
-2. Then upload the compressed package to the server's `/root/` directory and `root` rootlog in to the server with user
+1. Trước tiên hãy tải xuống gói nén mới nhất từ ​​https://github.com/alireza0/x-ui/releases, thường chọn Architecture `amd64`
+2. Sau đó tải gói nén lên thư mục `/root/` của máy chủ và rootlog `root` vào máy chủ với người dùng
 
-> If your server cpu architecture is not `amd64` replace another architecture
+> Nếu kiến ​​trúc cpu máy chủ của bạn không phải là `amd64`, hãy thay thế kiến ​​trúc khác
 
 ```sh
 ARCH=$(uname -m)
@@ -61,15 +61,16 @@ systemctl enable x-ui
 systemctl restart x-ui
 ```
 
-## Install using docker
 
-1. install docker
+## Cài đặt bằng docker
+
+1. cài đặt docker
 
 ```shell
 curl -fsSL https://get.docker.com | sh
 ```
 
-2. install x-ui
+2. cài đặt x-ui
 
 ```shell
 mkdir x-ui && cd x-ui
@@ -82,31 +83,31 @@ docker run -itd \
     alireza7/x-ui:latest
 ```
 
-> Build your own image
+> Xây dựng hình ảnh của riêng bạn
 
 ```shell
 docker build -t x-ui .
 ```
 
-# Features
+ Đặc trưng
 
-- System Status Monitoring
-- Search within all inbounds and clients
-- Support Dark/Light theme UI
-- Support multi-user multi-protocol, web page visualization operation
-- Support multi-domain configuration and multi-certificate inbounds
-- Supported protocols: vmess, vless, trojan, shadowsocks, dokodemo-door, socks, http
-- Support for configuring more transport configurations
-- Traffic statistics, limit traffic, limit expiration time
-- Customizable xray configuration templates
-- Support subscription ( multi ) link
-- Detect users which are expiring or exceed traffic limit soon
-- Support https access panel (self-provided domain name + ssl certificate)
-- Support one-click SSL certificate application and automatic renewal
-- For more advanced configuration items, please refer to the panel
-- Support export/import database from panel
+- Giám sát trạng thái hệ thống
+- Tìm kiếm trong tất cả các khách hàng và khách hàng
+- Hỗ trợ giao diện người dùng chủ đề Tối/Sáng
+- Hỗ trợ nhiều người dùng, đa giao thức, thao tác trực quan hóa trang web
+- Hỗ trợ cấu hình đa miền và gửi đến nhiều chứng chỉ
+- Các giao thức được hỗ trợ: vmess, vless, trojan, Shadowocks, dokodemo-door, vớ, http
+- Hỗ trợ cấu hình nhiều cấu hình vận chuyển hơn
+- Thống kê lưu lượng, giới hạn lưu lượng, giới hạn thời gian hết hạn
+- Mẫu cấu hình xray có thể tùy chỉnh
+- Hỗ trợ liên kết đăng ký (đa)
+- Phát hiện sớm người dùng sắp hết hạn hoặc vượt quá giới hạn lưu lượng
+- Hỗ trợ truy cập https (tên miền tự cung cấp + chứng chỉ ssl)
+- Hỗ trợ ứng dụng chứng chỉ SSL bằng một cú nhấp chuột và tự động gia hạn
+- Để biết thêm các mục cấu hình nâng cao, vui lòng tham khảo bảng
+- Hỗ trợ xuất/nhập cơ sở dữ liệu từ bảng điều khiển
 
-## suggestion system
+## Hỗ trợ hệ điều hành
 
 - CentOS 8+
 - Ubuntu 20+
@@ -115,8 +116,8 @@ docker build -t x-ui .
 
 ## API routes
 
-- `/login` with `PUSH` user data: `{username: '', password: ''}` for login
-- `/xui/API/inbounds` base for following actions:
+- `/login` với `PUSH` dữ liệu người dùng: `{username: '', password: ''}` cho đăng nhập
+- `/xui/API/inbounds` với bảng hành động sau:
 
 | Method | Path                            | Action                                    |
 | :----: | ------------------------------- | ----------------------------------------- |
@@ -195,35 +196,35 @@ Reference syntax:
 - @daily // Daily notification (00:00 in the morning)
 - @every 8h // notify every 8 hours
 
-### Telegram Bot Features
+### Tính năng của Telegram Bot
 
-- Report periodic
-- Login notification
-- CPU threshold notification
-- Threshold for Expiration time and Traffic to report in advance
-- Support client report menu if client's telegram username added to the user's configurations
-- Support telegram traffic report searched with UUID (VMESS/VLESS) or Password (TROJAN) - anonymously
-- Menu based bot
-- Search client by email ( only admin )
-- Check all inbounds
-- Check server status
-- Check depleted users
-- Receive backup by request and in periodic reports
-- Multi language bot
-</details>
+- Báo cáo định kỳ
+- Thông báo đăng nhập
+- Thông báo ngưỡng CPU
+- Ngưỡng thời gian hết hạn và lưu lượng truy cập để báo cáo trước
+- Hỗ trợ menu báo cáo khách hàng nếu tên người dùng telegram của khách hàng được thêm vào cấu hình của người dùng
+- Hỗ trợ báo cáo lưu lượng điện tín được tìm kiếm bằng UUID (VMESS/VLESS) hoặc Mật khẩu (TROJAN) - ẩn danh
+- Bot dựa trên menu
+- Tìm kiếm khách hàng qua email (chỉ quản trị viên)
+- Kiểm tra tất cả các đường vào
+- Kiểm tra trạng thái máy chủ
+- Kiểm tra người dùng đã cạn kiệt
+- Nhận backup theo yêu cầu và theo báo cáo định kỳ
+- Bot đa ngôn ngữ
+</ chi tiết>
 
-# T-Shoots:
+#T-Shoot:
 
-**If you upgrade from an old version or other forks, for enable traffic for users you should do :**
+**Nếu bạn nâng cấp từ phiên bản cũ hoặc các fork khác, để kích hoạt lưu lượng truy cập cho người dùng bạn nên làm :**
 
-find this in config :
+tìm cái này trong cấu hình:
 
 ```json
  "policy": {
     "system": {
 ```
 
-**and add this just after ` "policy": {` :**
+**và thêm phần này ngay sau ` "policy": {` :**
 
 ```json
     "levels": {
@@ -234,7 +235,7 @@ find this in config :
     },
 ```
 
-**the final output is like :**
+**đầu ra cuối cùng giống như :*
 
 ```json
   "policy": {
@@ -257,16 +258,16 @@ restart panel
 
 </details>
 
-# a special thanks to
+# lời cảm ơn đặc biệt tới
 
 - [HexaSoftwareTech](https://github.com/HexaSoftwareTech/)
 - [MHSanaei](https://github.com/MHSanaei)
 
-# Acknowledgment
+# Nhìn nhận
 
-- [Iran Hosted Domains](https://github.com/bootmortis/iran-hosted-domains) (License: **MIT**): _A comprehensive list of Iranian domains and services that are hosted within the country._
-- [PersianBlocker](https://github.com/MasterKia/PersianBlocker) (License: **AGPLv3**): _An optimal and extensive list to block ads and trackers on Persian websites._
+- [Miền được lưu trữ tại Iran](https://github.com/bootmortis/iran-hosted-domains) (Giấy phép: **MIT**): _Danh sách đầy đủ các miền và dịch vụ của Iran được lưu trữ trong nước._
+- [PersianBlocker](https://github.com/MasterKia/PersianBlocker) (Giấy phép: **AGPLv3**): _Danh sách mở rộng và tối ưu để chặn quảng cáo và trình theo dõi trên các trang web của Ba Tư._
 
-## Stargazers over time
+## Nhà chiêm tinh theo thời gian
 
-[![Stargazers over time](https://starchart.cc/alireza0/x-ui.svg)](https://starchart.cc/alireza0/x-ui)
+[![Người ngắm sao theo thời gian](https://starchart.cc/alireza0/x-ui.svg)](https://starchart.cc/alireza0/x-ui)
